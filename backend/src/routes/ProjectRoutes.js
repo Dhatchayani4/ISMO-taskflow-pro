@@ -14,7 +14,7 @@ const {
   getProjectById,
   updateProject,
   deleteProject
-} = require("../controllers/projectController");
+} = require("../controllers/ProjectController");
 router.post(
   "/",
   protect,
