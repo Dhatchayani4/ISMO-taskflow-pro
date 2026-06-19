@@ -5,7 +5,7 @@ import api from "../api/axios";
 function Register() {
   const navigate = useNavigate();
 
-  const [name, setName] = useState("");
+  const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
@@ -16,11 +16,12 @@ function Register() {
     try {
       setLoading(true);
 
+      
       await api.post("/auth/register", {
-        name,
-        email,
-        password,
-      });
+      fullName,
+      email,
+      password,
+});
 
       alert("Registration successful!");
       navigate("/");
